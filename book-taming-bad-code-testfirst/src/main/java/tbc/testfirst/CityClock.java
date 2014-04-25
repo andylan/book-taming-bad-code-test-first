@@ -11,4 +11,8 @@ public class CityClock {
         this.cityName = cityName;
         this.utcOffset = utcOffset;
     }
+
+    public int getLocalTime() {
+        return 1;
+    }
 }
