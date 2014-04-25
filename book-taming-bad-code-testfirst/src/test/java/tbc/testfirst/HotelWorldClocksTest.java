@@ -2,6 +2,8 @@ package tbc.testfirst;
 
 import org.junit.Test;
 
+import static org.junit.Assert.assertEquals;
+
 /**
  * Created by benwu on 14-4-25.
  */
