@@ -10,4 +10,8 @@ public class PhoneClock {
     public PhoneClock(int utcOffset) {
         this.utcOffset = utcOffset;
     }
+
+    public void setLocalTime(int localTime) {
+        
+    }
 }
