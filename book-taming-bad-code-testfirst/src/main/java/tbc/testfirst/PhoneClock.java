@@ -12,6 +12,10 @@ public class PhoneClock {
     }
 
     public void setLocalTime(int localTime) {
+
+    }
+
+    public void setHotelWorldClock(CityClock cityClock) {
         
     }
 }
