@@ -8,6 +8,7 @@ import java.util.List;
 public class PhoneClock {
 
     private final int utcOffset;
+    private List<CityClock> hotelWorldClocks;
 
     public PhoneClock(int utcOffset) {
         this.utcOffset = utcOffset;
@@ -24,6 +25,6 @@ public class PhoneClock {
     }
 
     public void setHotelWorldClocks(List hotelWorldClocks) {
-
+        this.hotelWorldClocks = hotelWorldClocks;
     }
 }
