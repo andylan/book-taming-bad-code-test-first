@@ -1,5 +1,7 @@
 package tbc.testfirst;
 
+import java.util.List;
+
 /**
  * Created by benwu on 14-4-25.
  */
@@ -17,5 +19,9 @@ public class PhoneClock {
 
     public void setHotelWorldClock(CityClock cityClock) {
         
+    }
+
+    public void setHotelWorldClocks(List hotelWorldClocks) {
+
     }
 }
