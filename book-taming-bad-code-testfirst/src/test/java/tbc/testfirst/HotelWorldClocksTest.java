@@ -1,5 +1,6 @@
 package tbc.testfirst;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import java.time.zone.ZoneOffsetTransitionRule;
@@ -12,11 +13,17 @@ import static org.junit.Assert.assertEquals;
  * Created by benwu on 14-4-25.
  */
 public class HotelWorldClocksTest {
+    private List<CityClock> hotelWorldClocks;
+
+    @Before
+    public void initialization() {
+        hotelWorldClocks = new ArrayList<CityClock>();
+    }
+
     @Test
     public void the_time_of_clock_London_should_be_1_after_the_phone_clock_is_set_to_9_Beijing_time() {
         // Arrange
         CityClock londonClock = new CityClock("London", 0);
-        List hotelWorldClocks = new ArrayList<CityClock>();
         hotelWorldClocks.add(londonClock);
         PhoneClock phoneClock = new PhoneClock(8);
         phoneClock.setHotelWorldClocks(hotelWorldClocks);
@@ -32,7 +39,6 @@ public class HotelWorldClocksTest {
     public void the_time_of_clock_Moscow_should_be_5_after_the_phone_clock_is_set_to_9_Beijing_time() {
         // Arrange
         CityClock moscowClock = new CityClock("Moscow", 4);
-        List hotelWorldClocks = new ArrayList<CityClock>();
         hotelWorldClocks.add(moscowClock);
         PhoneClock phoneClock = new PhoneClock(8);
         phoneClock.setHotelWorldClocks(hotelWorldClocks);
@@ -48,7 +54,6 @@ public class HotelWorldClocksTest {
     public void the_time_of_clock_NewYork_should_be_20_after_the_phone_clock_is_set_to_9_Beijing_time() {
         // Arrange
         CityClock newYorkClock = new CityClock("NewYork", -5);
-        List hotelWorldClocks = new ArrayList<CityClock>();
         hotelWorldClocks.add(newYorkClock);
         PhoneClock phoneClock = new PhoneClock(8);
         phoneClock.setHotelWorldClocks(hotelWorldClocks);
