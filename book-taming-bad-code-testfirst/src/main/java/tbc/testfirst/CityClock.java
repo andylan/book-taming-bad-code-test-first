@@ -6,6 +6,7 @@ package tbc.testfirst;
 public class CityClock {
     private final String cityName;
     private final int utcOffset;
+    private int utcZeroTime;
 
     public CityClock(String cityName, int utcOffset) {
         this.cityName = cityName;
