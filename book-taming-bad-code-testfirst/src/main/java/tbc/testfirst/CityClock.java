@@ -14,6 +14,10 @@ public class CityClock {
     }
 
     public int getLocalTime() {
+        return withinRangeFrom0To24();
+    }
+
+    private int withinRangeFrom0To24() {
         return (this.utcZeroTime + this.utcOffset + 24) % 24;
     }
 
