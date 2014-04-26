@@ -20,10 +20,6 @@ public class PhoneClock {
         }
     }
 
-    public void setHotelWorldClock(CityClock cityClock) {
-        
-    }
-
     public void setHotelWorldClocks(List hotelWorldClocks) {
         this.hotelWorldClocks = hotelWorldClocks;
     }
