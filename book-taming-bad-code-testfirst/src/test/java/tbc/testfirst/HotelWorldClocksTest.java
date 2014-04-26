@@ -15,8 +15,10 @@ public class HotelWorldClocksTest {
     @Test
     public void the_time_of_London_clock_should_be_1_after_the_phone_clock_is_set_to_9_Beijing_time() {
         CityClock londonClock = new CityClock("London", 0);
+        List hotelWorldClocks = new ArrayList<CityClock>();
+        hotelWorldClocks.add(londonClock);
         PhoneClock phoneClock = new PhoneClock(8);
-        phoneClock.setHotelWorldClock(londonClock);
+        phoneClock.setHotelWorldClocks(hotelWorldClocks);
 
         phoneClock.setLocalTime(9);
 
