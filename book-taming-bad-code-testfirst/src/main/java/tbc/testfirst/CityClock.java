@@ -14,7 +14,7 @@ public class CityClock {
     }
 
     public int getLocalTime() {
-        return 1;
+        return this.utcZeroTime + this.utcOffset;
     }
 
     public void setUtcZeroTime(int utcZeroTime) {
