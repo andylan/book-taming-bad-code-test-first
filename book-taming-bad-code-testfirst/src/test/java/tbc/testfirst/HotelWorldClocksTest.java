@@ -14,10 +14,13 @@ import static org.junit.Assert.assertEquals;
  */
 public class HotelWorldClocksTest {
     private List<CityClock> hotelWorldClocks;
+    private PhoneClock phoneClock;
 
     @Before
     public void initialization() {
         hotelWorldClocks = new ArrayList<CityClock>();
+        phoneClock = new PhoneClock(8);
+        phoneClock.setHotelWorldClocks(hotelWorldClocks);
     }
 
     @Test
@@ -25,8 +28,6 @@ public class HotelWorldClocksTest {
         // Arrange
         CityClock londonClock = new CityClock("London", 0);
         hotelWorldClocks.add(londonClock);
-        PhoneClock phoneClock = new PhoneClock(8);
-        phoneClock.setHotelWorldClocks(hotelWorldClocks);
 
         // Act
         phoneClock.setLocalTime(9);
@@ -40,8 +41,6 @@ public class HotelWorldClocksTest {
         // Arrange
         CityClock moscowClock = new CityClock("Moscow", 4);
         hotelWorldClocks.add(moscowClock);
-        PhoneClock phoneClock = new PhoneClock(8);
-        phoneClock.setHotelWorldClocks(hotelWorldClocks);
 
         // Act
         phoneClock.setLocalTime(9);
@@ -55,8 +54,6 @@ public class HotelWorldClocksTest {
         // Arrange
         CityClock newYorkClock = new CityClock("NewYork", -5);
         hotelWorldClocks.add(newYorkClock);
-        PhoneClock phoneClock = new PhoneClock(8);
-        phoneClock.setHotelWorldClocks(hotelWorldClocks);
 
         // Act
         phoneClock.setLocalTime(9);
