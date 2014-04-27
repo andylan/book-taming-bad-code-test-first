@@ -13,21 +13,17 @@ import static org.junit.Assert.assertEquals;
  * Created by benwu on 14-4-25.
  */
 public class HotelWorldClocksTest {
-    private List<CityClock> hotelWorldClocks;
     private PhoneClock phoneClock;
 
     @Before
     public void initialization() {
-        hotelWorldClocks = new ArrayList<CityClock>();
         phoneClock = new PhoneClock(8);
-        phoneClock.setHotelWorldClocks(hotelWorldClocks);
     }
 
     @Test
     public void the_time_of_clock_London_should_be_1_after_the_phone_clock_is_set_to_9_Beijing_time() {
         // Arrange
         CityClock londonClock = new CityClock("London", 0);
-        hotelWorldClocks.add(londonClock);
 
         WorldClockSystem worldClockSystem =new WorldClockSystem();
         worldClockSystem.attach(londonClock);
@@ -44,7 +40,6 @@ public class HotelWorldClocksTest {
     public void the_time_of_clock_Moscow_should_be_5_after_the_phone_clock_is_set_to_9_Beijing_time() {
         // Arrange
         CityClock moscowClock = new CityClock("Moscow", 4);
-        hotelWorldClocks.add(moscowClock);
 
         WorldClockSystem worldClockSystem =new WorldClockSystem();
         worldClockSystem.attach(moscowClock);
@@ -61,7 +56,6 @@ public class HotelWorldClocksTest {
     public void the_time_of_clock_NewYork_should_be_20_after_the_phone_clock_is_set_to_9_Beijing_time() {
         // Arrange
         CityClock newYorkClock = new CityClock("NewYork", -5);
-        hotelWorldClocks.add(newYorkClock);
 
         WorldClockSystem worldClockSystem =new WorldClockSystem();
         worldClockSystem.attach(newYorkClock);
