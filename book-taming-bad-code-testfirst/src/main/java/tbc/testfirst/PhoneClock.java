@@ -7,13 +7,14 @@ public class PhoneClock {
 
     private final int utcOffset;
     private WorldClockSystem worldClockSystem;
+    private int localTime;
 
     public PhoneClock(int utcOffset) {
         this.utcOffset = utcOffset;
     }
 
     public void setLocalTime(int localTime) {
-        // TODO: The local time of the PhoneClock object should be set. Add a test for it at first.
+        this.localTime = localTime;
         worldClockSystem.updateAllClockTime(localTime - utcOffset);
     }
 
@@ -22,6 +23,6 @@ public class PhoneClock {
     }
 
     public int getLocalTime() {
-        return 9;
+        return this.localTime;
     }
 }
