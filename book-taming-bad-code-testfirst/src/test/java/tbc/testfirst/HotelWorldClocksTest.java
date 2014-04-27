@@ -79,4 +79,17 @@ public class HotelWorldClocksTest {
         assertEquals(9, beijingClock.getLocalTime());
     }
 
+    @Test
+    public void the_time_of_clock_Sydney_should_be_11_after_the_phone_clock_is_set_to_9_Beijing_time() {
+        // Arrange
+        CityClock sydneyClock = new CityClock("Sydney", 10);
+        worldClockSystem.attach(sydneyClock);
+
+        // Act
+        phoneClock.setLocalTime(9);
+
+        // Assert
+        assertEquals(11, sydneyClock.getLocalTime());
+    }
+
 }
