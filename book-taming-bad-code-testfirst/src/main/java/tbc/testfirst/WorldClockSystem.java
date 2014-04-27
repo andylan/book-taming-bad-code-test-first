@@ -12,4 +12,10 @@ public class WorldClockSystem {
     public void attach(CityClock cityClock) {
         cityClocks.add(cityClock);
     }
+
+    public void updateAllClockTime() {
+        for (CityClock cityClock : this.cityClocks) {
+            cityClock.setUtcZeroTime(utcZeroTime);
+        }
+    }
 }
