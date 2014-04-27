@@ -29,6 +29,7 @@ public class HotelWorldClocksTest {
         CityClock londonClock = new CityClock("London", 0);
         hotelWorldClocks.add(londonClock);
 
+        WorldClockSystem worldClockSystem =new WorldClockSystem();
         worldClockSystem.attach(londonClock);
         phoneClock.setWorldClockSystem(worldClockSystem);
 
