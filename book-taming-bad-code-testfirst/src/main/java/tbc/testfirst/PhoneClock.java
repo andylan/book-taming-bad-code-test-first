@@ -21,7 +21,7 @@ public class PhoneClock {
             cityClock.setUtcZeroTime(localTime - utcOffset);
         }
 
-        worldClockSystem.updateAllClockTime();
+        worldClockSystem.updateAllClockTime(0);
     }
 
     public void setHotelWorldClocks(List hotelWorldClocks) {

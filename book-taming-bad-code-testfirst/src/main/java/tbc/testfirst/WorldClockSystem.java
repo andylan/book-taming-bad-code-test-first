@@ -13,7 +13,7 @@ public class WorldClockSystem {
         cityClocks.add(cityClock);
     }
 
-    public void updateAllClockTime() {
+    public void updateAllClockTime(int utcZeroTime) {
         for (CityClock cityClock : this.cityClocks) {
             cityClock.setUtcZeroTime(utcZeroTime);
         }
