@@ -23,4 +23,8 @@ public class PhoneClock {
     public void setHotelWorldClocks(List hotelWorldClocks) {
         this.hotelWorldClocks = hotelWorldClocks;
     }
+
+    public void setWorldClockSystem(WorldClockSystem worldClockSystem) {
+
+    }
 }
