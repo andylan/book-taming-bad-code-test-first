@@ -3,10 +3,6 @@ package tbc.testfirst;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.time.zone.ZoneOffsetTransitionRule;
-import java.util.ArrayList;
-import java.util.List;
-
 import static org.junit.Assert.assertEquals;
 
 /**
@@ -64,6 +60,8 @@ public class HotelWorldClocksTest {
 
     @Test
     public void the_time_of_phone_clock_should_be_9_after_it_is_set_to_9_Beijing_time() {
+        // Arrange, Act
+        phoneClock.setLocalTime(9);
         // Assert
         assertEquals(9, phoneClock.getLocalTime());
     }
