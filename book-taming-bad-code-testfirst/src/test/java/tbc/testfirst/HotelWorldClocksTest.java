@@ -29,6 +29,9 @@ public class HotelWorldClocksTest {
         CityClock londonClock = new CityClock("London", 0);
         hotelWorldClocks.add(londonClock);
 
+        worldClockSystem.attach(londonClock);
+        phoneClock.setWorldClockSystem(worldClockSystem);
+
         // Act
         phoneClock.setLocalTime(9);
 
