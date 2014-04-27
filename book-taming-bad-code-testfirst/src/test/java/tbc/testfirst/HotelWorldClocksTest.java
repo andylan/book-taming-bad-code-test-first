@@ -65,4 +65,18 @@ public class HotelWorldClocksTest {
         // Assert
         assertEquals(9, phoneClock.getLocalTime());
     }
+
+    @Test
+    public void the_time_of_clock_Beijing_should_be_9_after_the_phone_clock_is_set_to_9_Beijing_time() {
+        // Arrange
+        CityClock beijingClock = new CityClock("Beijing", 8);
+        worldClockSystem.attach(beijingClock);
+
+        // Act
+        phoneClock.setLocalTime(9);
+
+        // Assert
+        assertEquals(9, beijingClock.getLocalTime());
+    }
+
 }
