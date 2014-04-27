@@ -15,6 +15,7 @@ public class PhoneClock {
     }
 
     public void setLocalTime(int localTime) {
+        // TODO: The local time of the PhoneClock object should be set. Add a test for it at first.
         for (CityClock cityClock : this.hotelWorldClocks) {
             cityClock.setUtcZeroTime(localTime - utcOffset);
         }
