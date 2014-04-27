@@ -14,10 +14,12 @@ import static org.junit.Assert.assertEquals;
  */
 public class HotelWorldClocksTest {
     private PhoneClock phoneClock;
+    private WorldClockSystem worldClockSystem;
 
     @Before
     public void initialization() {
         phoneClock = new PhoneClock(8);
+        worldClockSystem = new WorldClockSystem();
     }
 
     @Test
@@ -25,7 +27,6 @@ public class HotelWorldClocksTest {
         // Arrange
         CityClock londonClock = new CityClock("London", 0);
 
-        WorldClockSystem worldClockSystem =new WorldClockSystem();
         worldClockSystem.attach(londonClock);
         phoneClock.setWorldClockSystem(worldClockSystem);
 
