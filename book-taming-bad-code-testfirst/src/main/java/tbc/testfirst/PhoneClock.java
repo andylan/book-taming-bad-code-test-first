@@ -9,6 +9,7 @@ public class PhoneClock {
 
     private final int utcOffset;
     private List<CityClock> hotelWorldClocks;
+    private WorldClockSystem worldClockSystem;
 
     public PhoneClock(int utcOffset) {
         this.utcOffset = utcOffset;
@@ -28,6 +29,6 @@ public class PhoneClock {
     }
 
     public void setWorldClockSystem(WorldClockSystem worldClockSystem) {
-
+        this.worldClockSystem = worldClockSystem;
     }
 }
