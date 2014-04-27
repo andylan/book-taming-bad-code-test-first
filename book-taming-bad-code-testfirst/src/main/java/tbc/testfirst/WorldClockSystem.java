@@ -5,6 +5,6 @@ package tbc.testfirst;
  */
 public class WorldClockSystem {
     public void attach(CityClock cityClock) {
-
+        cityClocks.add(cityClock);
     }
 }
