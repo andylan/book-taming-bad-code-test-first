@@ -46,6 +46,10 @@ public class HotelWorldClocksTest {
         CityClock moscowClock = new CityClock("Moscow", 4);
         hotelWorldClocks.add(moscowClock);
 
+        WorldClockSystem worldClockSystem =new WorldClockSystem();
+        worldClockSystem.attach(moscowClock);
+        phoneClock.setWorldClockSystem(worldClockSystem);
+
         // Act
         phoneClock.setLocalTime(9);
 
@@ -58,6 +62,10 @@ public class HotelWorldClocksTest {
         // Arrange
         CityClock newYorkClock = new CityClock("NewYork", -5);
         hotelWorldClocks.add(newYorkClock);
+
+        WorldClockSystem worldClockSystem =new WorldClockSystem();
+        worldClockSystem.attach(newYorkClock);
+        phoneClock.setWorldClockSystem(worldClockSystem);
 
         // Act
         phoneClock.setLocalTime(9);
