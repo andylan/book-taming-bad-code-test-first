@@ -20,4 +20,8 @@ public class PhoneClock {
     public void setWorldClockSystem(WorldClockSystem worldClockSystem) {
         this.worldClockSystem = worldClockSystem;
     }
+
+    public int getLocalTime() {
+        return 9;
+    }
 }
