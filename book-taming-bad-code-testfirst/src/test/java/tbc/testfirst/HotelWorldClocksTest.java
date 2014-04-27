@@ -61,4 +61,10 @@ public class HotelWorldClocksTest {
         // Assert
         assertEquals(20, newYorkClock.getLocalTime());
     }
+
+    @Test
+    public void the_time_of_phone_clock_should_be_9_after_it_is_set_to_9_Beijing_time() {
+        // Assert
+        assertEquals(9, phoneClock.getLocalTime());
+    }
 }
